@@ -8,7 +8,7 @@ region      = "us-central1"
 resource "google_compute_attached_disk" "first-disk" {
   disk     =  "disk-1"
   instance =  "test01"
-  project     = "my-project-id"
+  project     = "midevops"
   zone         = "us-central1-a"
 }
 
