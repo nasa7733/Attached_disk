@@ -41,7 +41,6 @@ boot_disk {
 
          lifecycle {
     ignore_changes = [attached_disk]
-  }
 }
-       }
-     }
+      
+  }
