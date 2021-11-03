@@ -34,10 +34,6 @@ boot_disk {
    //      email  = 584230291121-compute@developer.gserviceaccount.com
    //      scopes = ["cloud-platform"]
 
-resource "google_compute_attached_disk" "default" {
-  disk     =  "disk-1"
-  instance =  "test01"
-}
 
      
          lifecycle {
@@ -45,3 +41,9 @@ resource "google_compute_attached_disk" "default" {
 }
       
   }
+
+
+  resource "google_compute_attached_disk" "default" {
+  disk     =  disk-1
+  instance =  test01
+}
