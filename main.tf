@@ -15,7 +15,7 @@ resource "google_compute_attached_disk" "first-disk" {
 resource "google_compute_instance" "first-vm" {
   name         = "test01"
   machine_type = "f1-micro"
-  zone         = "us-central1-a"
+  zone         = "us-west4-b"
 
 boot_disk {
     initialize_params {
