@@ -34,10 +34,10 @@ boot_disk {
 
      metadata_startup_script = "echo hi > /test.txt"
 
-     service_account {
-         # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-         email  = 584230291121-compute@developer.gserviceaccount.com
-         scopes = ["cloud-platform"]
+   //  service_account {
+   //      # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
+   //      email  = 584230291121-compute@developer.gserviceaccount.com
+   //      scopes = ["cloud-platform"]
 
          lifecycle {
     ignore_changes = [attached_disk]
