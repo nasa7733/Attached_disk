@@ -9,7 +9,7 @@ resource "google_compute_attached_disk" "first-disk" {
   disk     =  "disk-1"
   instance =  "test01"
   project     = "midevops"
-  zone         = "us-central1-a"
+  zone         = "us-west4-b"
 }
 
 resource "google_compute_instance" "first-vm" {
