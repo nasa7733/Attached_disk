@@ -1,6 +1,6 @@
 provider "google" {
 
-project     = "my-project-id"
+project     = "midevops"
 region      = "us-central1"
 
 }
