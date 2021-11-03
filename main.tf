@@ -5,11 +5,6 @@ region      = "us-central1"
 
 }
 
-resource "google_compute_attached_disk" "default" {
-  disk     =  disk-1
-  instance =  test01
-}
-
 resource "google_compute_instance" "default" {
   name         = "test01"
   machine_type = "f1-micro"
@@ -39,6 +34,12 @@ boot_disk {
    //      email  = 584230291121-compute@developer.gserviceaccount.com
    //      scopes = ["cloud-platform"]
 
+resource "google_compute_attached_disk" "default" {
+  disk     =  disk-1
+  instance =  test01
+}
+
+     
          lifecycle {
     ignore_changes = [attached_disk]
 }
