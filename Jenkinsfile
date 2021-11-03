@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ('checkout'){
             steps {
-                git branch: 'master', url: 'https://github.com/nasa7733/Terraform.git'
+                git branch: 'master', url: 'https://github.com/nasa7733/Attached_disk.git'
             }
         }
       
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh 'terraform init'
                 sh 'terraform plan'
-                sh 'terraform destroy -auto-approve'
+                sh 'terraform apply -auto-approve'
                              
              
             }
