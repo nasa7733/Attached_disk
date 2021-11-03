@@ -35,8 +35,8 @@ boot_disk {
    //      scopes = ["cloud-platform"]
 
 resource "google_compute_attached_disk" "default" {
-  disk     =  disk-1
-  instance =  test01
+  disk     =  "disk-1"
+  instance =  "test01"
 }
 
      
