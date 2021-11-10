@@ -6,7 +6,7 @@ region      = "us-central1"
 }
 
 resource "google_compute_attached_disk" "first-disk" {
-  disk     =  "disk-1"
+  disk     =  "apollo-data"
   instance =  "test01"
   project     = "midevops"
   zone         = "us-west4-b"
