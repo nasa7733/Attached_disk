@@ -5,13 +5,6 @@ region      = "us-central1"
 
 }
 
-resource "google_compute_attached_disk" "first-disk" {
-  disk     =  "apollo-data"
-  instance =  "test01"
-  project     = "midevops"
-  zone         = "us-west4-b"
-}
-
 resource "google_compute_instance" "first-vm" {
   name         = "test01"
   machine_type = "f1-micro"
