@@ -18,7 +18,7 @@ resource "google_compute_instance" "first-vm" {
   zone         = "us-west4-b"
   
   metadata = {
-    startup-script-url = "tfstate-midevops/startupscripts/scripts.sh"
+    startup-script-url = "gd://tfstate-midevops/startupscripts/scripts.sh"
   }
 
 boot_disk {
