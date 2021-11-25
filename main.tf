@@ -10,9 +10,7 @@ resource "google_compute_instance" "first-vm" {
   machine_type = "f1-micro"
   zone         = "us-west4-b"
   
-  metadata = {
-    startup-script-url = "gd://tfstate-midevops/startupscripts/scripts.sh"
-  }
+  
 
 boot_disk {
     initialize_params {
@@ -34,12 +32,8 @@ boot_disk {
        }
      }
 
-
-     metadata_startup_script = "echo hi > /test.txt"
-
-
-
-         lifecycle {
-    ignore_changes = ["attached_disk"]
-}
+metadata = {
+    startup-script-url = "gd://tfstate-midevops/startupscripts/scripts.sh"
+    startup_script = "echo hi > /test.txt"
+  }
        }
