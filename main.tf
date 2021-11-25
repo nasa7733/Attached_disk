@@ -16,6 +16,10 @@ resource "google_compute_instance" "first-vm" {
   name         = "test01"
   machine_type = "f1-micro"
   zone         = "us-west4-b"
+  
+  metadata = {
+    startup-script-url = "tfstate-midevops/startupscripts/scripts.sh"
+  }
 
 boot_disk {
     initialize_params {
