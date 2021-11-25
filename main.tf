@@ -1,15 +1,8 @@
 provider "google" {
 
 project     = "midevops"
-region      = "us-central1"
 
-}
 
-resource "google_compute_attached_disk" "first-disk" {
-  disk     =  "disk-1"
-  instance =  "test01"
-  project     = "my-project-id"
-  zone         = "us-central1-a"
 }
 
 resource "google_compute_instance" "first-vm" {
@@ -25,6 +18,10 @@ boot_disk {
     initialize_params {
       image = "debian-cloud/debian-9"
     }
+  }
+  
+  attached_disk {
+    source = "projects/midevops/zones/us-west4-b/disks/test01"
   }
 
   network_interface {
