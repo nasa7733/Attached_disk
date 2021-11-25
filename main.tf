@@ -34,7 +34,7 @@ boot_disk {
 
 metadata = {
   
-    startup_script = "echo "hi" > /tmp/test.txt"
+    startup_script = "echo hi > /tmp/test.txt"
     startup-script-url = "gs://tfstate-midevops/startupscripts/scripts.sh"
    
   }
