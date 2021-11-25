@@ -19,7 +19,7 @@ boot_disk {
   }
   
   attached_disk {
-    source = "projects/midevops/zones/us-west4-b/disks/test01"
+    source = "projects/midevops/zones/us-west4-b/disks/apollo-home"
   }
 
   network_interface {
