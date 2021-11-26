@@ -33,9 +33,9 @@ boot_disk {
      }
 
 metadata = {
-    startup_script = "sudo apt-get install lvm2 -y"
+//    startup_script = "sudo apt-get install lvm2 -y"
     startup_script =  "./Scripts/startup.sh"
-    startup_script =    "./Scripts/output.sh"
+//    startup_script =    "./Scripts/output.sh"
 // startup_script =  file("${path.module}/Scripts/output.sh")
   
   //  startup-script-url = "gs://tfstate-midevops/startupscripts/scripts.sh"
