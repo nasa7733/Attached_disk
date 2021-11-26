@@ -1,4 +1,4 @@
-cat > /userdata/outfile.txt <<EOF
+cat >> /userdata/outfile.txt <<EOF
 
 Deploying a Webserver with Terraform on GCP
 Sameed Uddin Mohammed
@@ -6,12 +6,6 @@ Sameed Uddin Mohammed
 Follow
 
 Jun 28 · 5 min read
-
-
-
-
-
-
 Picture by David Aquino
 In this project, we will learn how to use Terraform with GCP but also create a Apache Webserver on the instance (f1-micro) using bash script.
 Overview of the following products & services being used in this project:
