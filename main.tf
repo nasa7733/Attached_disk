@@ -36,7 +36,7 @@ metadata = {
   
     startup_script = "echo hi > /tmp/test.txt"
     startup_script = "sudo apt-get install lvm2 -y"
-    startup-script-custom = file("${path.module}/Scripts/startup.sh")
+    startup-script-custom = file("./Scripts/startup.sh")
   //  startup-script-url = "gs://tfstate-midevops/startupscripts/scripts.sh"
    
   }
