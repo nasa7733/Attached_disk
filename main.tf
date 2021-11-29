@@ -41,7 +41,7 @@ metadata = {
           SCRIPT
 //    startup_script =    "./Scripts/output.sh"
 // startup_script =  file("${path.module}/Scripts/output.sh")
-  //  startup-script-url = "gs://tfstate-midevops/startupscripts/scripts.sh"
+      startup-script-url = "gs://midevops/scripts.sh"
    
   }
        }
