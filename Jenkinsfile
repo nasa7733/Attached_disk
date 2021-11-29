@@ -23,16 +23,14 @@ pipeline {
         
          stage('Provision infrastructure') {
             steps {
-                sh 'terraform init'
-                sh 'terraform plan -out host.plan'
-                sh 'terraform apply host.plan'
-                             
-             
+                sh """
+		terraform init
+                terraform plan -out host.plan
+                terraform apply host.plan
+		sleep 600
+		terraform destroy -auto-approve
+		"""
             }
         }
-        
-        
-      
-      
     }
 }
