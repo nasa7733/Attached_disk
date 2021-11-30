@@ -42,9 +42,9 @@ metadata = {
 //    startup_script =    "./Scripts/output.sh"
 // startup_script =  file("${path.module}/Scripts/output.sh")
  
-     
+     metadata_startup-script-url =  "gs://midevops/scripts.sh"
                            
                             
            }
- metadata_startup-script-url =  "gs://midevops/scripts.sh"
+ 
     }
