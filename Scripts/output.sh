@@ -1,4 +1,4 @@
-cat >> /userdata/outfile.txt <<EOF
+cat > /userdata/outfile.txt <<EOF
 
 Deploying a Webserver with Terraform on GCP
 Narayanaswamy Chitra  
