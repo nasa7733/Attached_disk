@@ -27,9 +27,24 @@ pipeline {
 		terraform init
                 terraform plan -out host.plan
                 terraform apply host.plan
+		"""
+		}
+	}
+	stage ('post Build') {
+	steps {
+	sh 'gcloud config set project midevops'
+	sh 'gcloud compute instances add-metadata test01  --metadata startup-script-url=gs://midevops/scripts.sh'
+	
+		}
+	
+	}
+	stage (cleanup) {
+	steps {
+		sh """
 		sleep 600
 		terraform destroy -auto-approve
 		"""
+		   
             }
         }
     }
