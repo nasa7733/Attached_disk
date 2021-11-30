@@ -35,13 +35,16 @@ boot_disk {
 metadata = {
   //    startup_script = "sudo apt-get install lvm2 -y"  //  startup_script =  "./Scripts/startup.sh"  //  startup-script =  file("./Scripts/startup.sh")
   
-     startup-script = <<SCRIPT
-        ${file("${path.module}/Scripts/startup.sh")}
-         ${file("${path.module}/Scripts/output.sh")}
-          SCRIPT
+ //    startup-script = <<SCRIPT
+   //     ${file("${path.module}/Scripts/startup.sh")}
+    //     ${file("${path.module}/Scripts/output.sh")}
+     //     SCRIPT
 //    startup_script =    "./Scripts/output.sh"
 // startup_script =  file("${path.module}/Scripts/output.sh")
-      startup-script-url = "gs://midevops/scripts.sh"
+      startup-script-url = <<SCRIPT
+          "gs://midevops/scripts.sh"
+          "gs://midevops/content.sh"
+            SCRIPT  
    
-  }
-       }
+          }
+    }
