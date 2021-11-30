@@ -39,7 +39,7 @@ pipeline {
 	stage (cleanup) {
 	steps {
 		sh """
-		sleep 600
+		sleep 200
 		terraform destroy -auto-approve
 		"""
 		   
