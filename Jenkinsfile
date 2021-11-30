@@ -32,7 +32,7 @@ pipeline {
 	}
 	stage ('post Build') {
 	steps {
-	sh 'gcloud config set project midevops'
+	//sh 'gcloud config set project midevops'
 	sh 'gcloud compute instances add-metadata test01  --metadata startup-script-url=gs://midevops/scripts.sh'
 	
 		}
